@@ -24,35 +24,41 @@ public class HealthKitHandler {
                 // Handle the error here.
                 fatalError("Your arenot allowed to the health data")
             } else {
-                print ("Success")
+//                print ("Success")
             }
         }
     }
     
-    func getStepCountData() {
+    func getStepCountData() -> [Double] {
+        var data = [Double]()
+        
         //sample type
-        guard let sampleType = HKSampleType.quantityType(forIdentifier: .stepCount) else {return}
+        guard let sampleType = HKSampleType.quantityType(forIdentifier: .stepCount) else {return data}
         //limit
         let limit = HKObjectQueryNoLimit
         //predicate
         let predicate = setPredicate()
-        
         let sampleQuery = HKSampleQuery(sampleType: sampleType, predicate: predicate, limit: limit, sortDescriptors: nil) { (sampleQuery, results, error) in
             guard let samples = results as? [HKQuantitySample] else {return}
             DispatchQueue.main.async {
+                print(samples.count)
                 for sample in samples {
                     let startTime = sample.startDate
                     let steps = sample.quantity.doubleValue(for: .count())
-                    print ("step \(steps) , \(startTime)")
+                    data.append(steps)
                 }
             }
         }
         healthStore.execute(sampleQuery)
+        
+        return data
     }
     
-    func getActiveEnergyData() {
+    func getActiveEnergyData() -> [Double] {
+        var data = [Double]()
+        
         //sample type
-        guard let sampleType = HKSampleType.quantityType(forIdentifier: .activeEnergyBurned) else {return}
+        guard let sampleType = HKSampleType.quantityType(forIdentifier: .activeEnergyBurned) else {return data}
         //limit
         let limit = HKObjectQueryNoLimit
         //predicate
@@ -60,23 +66,27 @@ public class HealthKitHandler {
         
         let sampleQuery = HKSampleQuery(sampleType: sampleType, predicate: predicate, limit: limit, sortDescriptors: nil) { (query, results, error) in
             if results as? [HKQuantitySample] == nil {
-                print ("nil value")
+//                print ("nil value")
             }
             guard let samples = results as? [HKQuantitySample] else {return}
             DispatchQueue.main.async {
                 for sample in samples {
                     let caloriesValue = sample.quantity.doubleValue(for: .kilocalorie())
-                    print (caloriesValue)
+                    data.append(caloriesValue)
+//                    print (caloriesValue)
                 }
             }
         }
         healthStore.execute(sampleQuery)
+        return data
     }
     
     func setPredicate() -> NSPredicate{
-//        let yesterday = Date.yesterday
-        let today = Date()
-        let predicate = HKQuery.predicateForSamples(withStart: today, end: today, options: .strictStartDate)
+        let now = Date()
+        let startToday : Date = Calendar.current.startOfDay(for: now)
+        print (startToday ,now)
+        
+        let predicate = HKQuery.predicateForSamples(withStart: startToday, end: now, options: .strictEndDate)
         
         return predicate
     }

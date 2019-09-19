@@ -12,9 +12,9 @@ import UIKit
 class UserStepsModel {
     let name : String
     let steps : Double
-    let userImage : CGImage
+    let userImage : UIImage
     
-    init(name:String, image: CGImage, steps: Double?) {
+    init(name:String, image: UIImage, steps: Double?) {
         self.name = name
         self.steps = steps ?? 0
         self.userImage = image
