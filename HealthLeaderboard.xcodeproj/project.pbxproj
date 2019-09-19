@@ -9,19 +9,40 @@
 /* Begin PBXBuildFile section */
 		CCF2623B2333624D000D5AEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF2623A2333624D000D5AEE /* AppDelegate.swift */; };
 		CCF2623D2333624D000D5AEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF2623C2333624D000D5AEE /* ViewController.swift */; };
-		CCF262402333624D000D5AEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF2623E2333624D000D5AEE /* Main.storyboard */; };
+		CCF262402333624D000D5AEE /* Calories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF2623E2333624D000D5AEE /* Calories.storyboard */; };
 		CCF262422333624E000D5AEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCF262412333624E000D5AEE /* Assets.xcassets */; };
 		CCF262452333624E000D5AEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF262432333624E000D5AEE /* LaunchScreen.storyboard */; };
+		CCF2624D2333641B000D5AEE /* HealthKitHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF2624C2333641B000D5AEE /* HealthKitHandler.swift */; };
+		CCF2625123336723000D5AEE /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCF2625023336723000D5AEE /* HealthKit.framework */; };
+		CCF2625323336910000D5AEE /* Date + Yesterday etc.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF2625223336910000D5AEE /* Date + Yesterday etc.swift */; };
+		CCF2626123338AC8000D5AEE /* UserStepsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF2626023338AC8000D5AEE /* UserStepsModel.swift */; };
+		CCF26267233397FF000D5AEE /* UIImage + Rounded Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF26266233397FF000D5AEE /* UIImage + Rounded Frame.swift */; };
+		CCF2626C2333A9EC000D5AEE /* FirstWinnerCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF2626A2333A9EC000D5AEE /* FirstWinnerCustomCell.swift */; };
+		CCF2626D2333A9EC000D5AEE /* FirstWinnerCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCF2626B2333A9EC000D5AEE /* FirstWinnerCustomCell.xib */; };
+		CCF2626F2333BA76000D5AEE /* UsersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF2626E2333BA76000D5AEE /* UsersData.swift */; };
+		CCF262712333CA70000D5AEE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF262702333CA70000D5AEE /* LoginViewController.swift */; };
+		CCF262752333CED9000D5AEE /* UIView + Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF262742333CED9000D5AEE /* UIView + Shadow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CCF262372333624D000D5AEE /* HealthLeaderboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthLeaderboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF2623A2333624D000D5AEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCF2623C2333624D000D5AEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CCF2623F2333624D000D5AEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CCF2623F2333624D000D5AEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Calories.storyboard; sourceTree = "<group>"; };
 		CCF262412333624E000D5AEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCF262442333624E000D5AEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCF262462333624E000D5AEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCF2624C2333641B000D5AEE /* HealthKitHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitHandler.swift; sourceTree = "<group>"; };
+		CCF2624E23336723000D5AEE /* HealthLeaderboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthLeaderboard.entitlements; sourceTree = "<group>"; };
+		CCF2625023336723000D5AEE /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		CCF2625223336910000D5AEE /* Date + Yesterday etc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Yesterday etc.swift"; sourceTree = "<group>"; };
+		CCF2626023338AC8000D5AEE /* UserStepsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStepsModel.swift; sourceTree = "<group>"; };
+		CCF26266233397FF000D5AEE /* UIImage + Rounded Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Rounded Frame.swift"; sourceTree = "<group>"; };
+		CCF2626A2333A9EC000D5AEE /* FirstWinnerCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstWinnerCustomCell.swift; sourceTree = "<group>"; };
+		CCF2626B2333A9EC000D5AEE /* FirstWinnerCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstWinnerCustomCell.xib; sourceTree = "<group>"; };
+		CCF2626E2333BA76000D5AEE /* UsersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersData.swift; sourceTree = "<group>"; };
+		CCF262702333CA70000D5AEE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CCF262742333CED9000D5AEE /* UIView + Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView + Shadow.swift"; path = "HealthLeaderboard/Extensions/UIView + Shadow.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCF2625123336723000D5AEE /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +62,7 @@
 			children = (
 				CCF262392333624D000D5AEE /* HealthLeaderboard */,
 				CCF262382333624D000D5AEE /* Products */,
+				CCF2624F23336723000D5AEE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +77,80 @@
 		CCF262392333624D000D5AEE /* HealthLeaderboard */ = {
 			isa = PBXGroup;
 			children = (
+				CCF2625F23338A49000D5AEE /* Helper */,
+				CCF2625E23338A25000D5AEE /* Extensions */,
+				CCF2625423338967000D5AEE /* Calories */,
+				CCF2624E23336723000D5AEE /* HealthLeaderboard.entitlements */,
 				CCF2623A2333624D000D5AEE /* AppDelegate.swift */,
-				CCF2623C2333624D000D5AEE /* ViewController.swift */,
-				CCF2623E2333624D000D5AEE /* Main.storyboard */,
 				CCF262412333624E000D5AEE /* Assets.xcassets */,
 				CCF262432333624E000D5AEE /* LaunchScreen.storyboard */,
 				CCF262462333624E000D5AEE /* Info.plist */,
 			);
 			path = HealthLeaderboard;
+			sourceTree = "<group>";
+		};
+		CCF2624F23336723000D5AEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCF2625023336723000D5AEE /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCF2625423338967000D5AEE /* Calories */ = {
+			isa = PBXGroup;
+			children = (
+				CCF2625A233389A8000D5AEE /* Model */,
+				CCF2625C233389AE000D5AEE /* View */,
+				CCF2625B233389AB000D5AEE /* Controller */,
+			);
+			path = Calories;
+			sourceTree = "<group>";
+		};
+		CCF2625A233389A8000D5AEE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CCF2626023338AC8000D5AEE /* UserStepsModel.swift */,
+				CCF2626E2333BA76000D5AEE /* UsersData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CCF2625B233389AB000D5AEE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CCF2623C2333624D000D5AEE /* ViewController.swift */,
+				CCF262702333CA70000D5AEE /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CCF2625C233389AE000D5AEE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CCF2623E2333624D000D5AEE /* Calories.storyboard */,
+				CCF2626A2333A9EC000D5AEE /* FirstWinnerCustomCell.swift */,
+				CCF2626B2333A9EC000D5AEE /* FirstWinnerCustomCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCF2625E23338A25000D5AEE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CCF2625223336910000D5AEE /* Date + Yesterday etc.swift */,
+				CCF262742333CED9000D5AEE /* UIView + Shadow.swift */,
+				CCF26266233397FF000D5AEE /* UIImage + Rounded Frame.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CCF2625F23338A49000D5AEE /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				CCF2624C2333641B000D5AEE /* HealthKitHandler.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +185,11 @@
 				TargetAttributes = {
 					CCF262362333624D000D5AEE = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -122,9 +216,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCF2626D2333A9EC000D5AEE /* FirstWinnerCustomCell.xib in Resources */,
 				CCF262452333624E000D5AEE /* LaunchScreen.storyboard in Resources */,
 				CCF262422333624E000D5AEE /* Assets.xcassets in Resources */,
-				CCF262402333624D000D5AEE /* Main.storyboard in Resources */,
+				CCF262402333624D000D5AEE /* Calories.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,20 +230,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCF2624D2333641B000D5AEE /* HealthKitHandler.swift in Sources */,
 				CCF2623D2333624D000D5AEE /* ViewController.swift in Sources */,
+				CCF2626F2333BA76000D5AEE /* UsersData.swift in Sources */,
+				CCF2626123338AC8000D5AEE /* UserStepsModel.swift in Sources */,
+				CCF2626C2333A9EC000D5AEE /* FirstWinnerCustomCell.swift in Sources */,
+				CCF26267233397FF000D5AEE /* UIImage + Rounded Frame.swift in Sources */,
+				CCF262752333CED9000D5AEE /* UIView + Shadow.swift in Sources */,
 				CCF2623B2333624D000D5AEE /* AppDelegate.swift in Sources */,
+				CCF262712333CA70000D5AEE /* LoginViewController.swift in Sources */,
+				CCF2625323336910000D5AEE /* Date + Yesterday etc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CCF2623E2333624D000D5AEE /* Main.storyboard */ = {
+		CCF2623E2333624D000D5AEE /* Calories.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CCF2623F2333624D000D5AEE /* Base */,
 			);
-			name = Main.storyboard;
+			name = Calories.storyboard;
 			sourceTree = "<group>";
 		};
 		CCF262432333624E000D5AEE /* LaunchScreen.storyboard */ = {
@@ -282,6 +385,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HealthLeaderboard/HealthLeaderboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C5K4FW28Q2;
 				INFOPLIST_FILE = HealthLeaderboard/Info.plist;
@@ -289,7 +393,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.HealthLeaderboard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.VebbyC.HealthLeaderboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -300,6 +404,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HealthLeaderboard/HealthLeaderboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C5K4FW28Q2;
 				INFOPLIST_FILE = HealthLeaderboard/Info.plist;
@@ -307,7 +412,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.HealthLeaderboard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.VebbyC.HealthLeaderboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
