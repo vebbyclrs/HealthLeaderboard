@@ -1,5 +1,5 @@
 //
-//  UserCaloriesModel.swift
+//  UserStepsModel.swift
 //  HealthLeaderboard
 //
 //  Created by Vebby Clarissa on 19/09/19.
@@ -13,6 +13,7 @@ class UserStepsModel {
     let name : String
     let steps : Double
     let userImage : UIImage
+    var isMe : Bool = false
     
     init(name:String, userImage: UIImage, steps: Double?) {
         self.name = name

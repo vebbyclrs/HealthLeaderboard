@@ -11,7 +11,7 @@
 		CC23830D23340CC200A268E5 /* SecondWinnerCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC23830B23340CC200A268E5 /* SecondWinnerCustomCell.xib */; };
 		CCF2623B2333624D000D5AEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF2623A2333624D000D5AEE /* AppDelegate.swift */; };
 		CCF2623D2333624D000D5AEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF2623C2333624D000D5AEE /* ViewController.swift */; };
-		CCF262402333624D000D5AEE /* Calories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF2623E2333624D000D5AEE /* Calories.storyboard */; };
+		CCF262402333624D000D5AEE /* Steps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF2623E2333624D000D5AEE /* Steps.storyboard */; };
 		CCF262422333624E000D5AEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCF262412333624E000D5AEE /* Assets.xcassets */; };
 		CCF262452333624E000D5AEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF262432333624E000D5AEE /* LaunchScreen.storyboard */; };
 		CCF2624D2333641B000D5AEE /* HealthKitHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF2624C2333641B000D5AEE /* HealthKitHandler.swift */; };
@@ -32,7 +32,7 @@
 		CCF262372333624D000D5AEE /* HealthLeaderboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthLeaderboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF2623A2333624D000D5AEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCF2623C2333624D000D5AEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CCF2623F2333624D000D5AEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Calories.storyboard; sourceTree = "<group>"; };
+		CCF2623F2333624D000D5AEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Steps.storyboard; sourceTree = "<group>"; };
 		CCF262412333624E000D5AEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCF262442333624E000D5AEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCF262462333624E000D5AEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 		CCF2625C233389AE000D5AEE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CCF2623E2333624D000D5AEE /* Calories.storyboard */,
+				CCF2623E2333624D000D5AEE /* Steps.storyboard */,
 				CCF2626A2333A9EC000D5AEE /* FirstWinnerCustomCell.swift */,
 				CCF2626B2333A9EC000D5AEE /* FirstWinnerCustomCell.xib */,
 				CC23830A23340CC200A268E5 /* SecondWinnerCustomCell.swift */,
@@ -226,7 +226,7 @@
 				CC23830D23340CC200A268E5 /* SecondWinnerCustomCell.xib in Resources */,
 				CCF262452333624E000D5AEE /* LaunchScreen.storyboard in Resources */,
 				CCF262422333624E000D5AEE /* Assets.xcassets in Resources */,
-				CCF262402333624D000D5AEE /* Calories.storyboard in Resources */,
+				CCF262402333624D000D5AEE /* Steps.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,12 +254,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CCF2623E2333624D000D5AEE /* Calories.storyboard */ = {
+		CCF2623E2333624D000D5AEE /* Steps.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CCF2623F2333624D000D5AEE /* Base */,
 			);
-			name = Calories.storyboard;
+			name = Steps.storyboard;
 			sourceTree = "<group>";
 		};
 		CCF262432333624E000D5AEE /* LaunchScreen.storyboard */ = {

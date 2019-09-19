@@ -68,10 +68,10 @@
             </objects>
             <point key="canvasLocation" x="-730.43478260869574" y="665.625"/>
         </scene>
-        <!--Calory Leaderboard-->
+        <!--Step Leaderboard-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="Calory Leaderboard" id="BYZ-38-t0r" customClass="ViewController" customModule="HealthLeaderboard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Step Leaderboard" id="BYZ-38-t0r" customClass="ViewController" customModule="HealthLeaderboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -202,13 +202,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Calory Leaderboard" id="3Ny-G1-l9g"/>
+                    <navigationItem key="navigationItem" title="Step Leaderboard" id="3Ny-G1-l9g"/>
                     <connections>
                         <outlet property="lbTable" destination="8tI-NQ-kJQ" id="2SZ-U5-1kS"/>
                         <outlet property="userBanner" destination="B02-jU-hxN" id="srO-Kk-VC8"/>
-                        <outlet property="userCalories" destination="Okv-OE-joz" id="3OZ-sR-xpB"/>
                         <outlet property="userImage" destination="kC6-TP-zZI" id="YSB-gP-XCz"/>
                         <outlet property="userRank" destination="lKt-Aa-1oq" id="Rkh-lD-1KJ"/>
+                        <outlet property="userSteps" destination="Okv-OE-joz" id="3OZ-sR-xpB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -24,7 +24,6 @@ public class HealthKitHandler {
                 // Handle the error here.
                 fatalError("Your arenot allowed to the health data")
             } else {
-//                print ("Success")
             }
         }
     }
@@ -37,68 +36,62 @@ public class HealthKitHandler {
             }
             completion(tmp)
         }
-        
     }
-    func getTodayCalorieData() -> Double {
-        let data = getActiveEnergyData()
+    func getTodayCalorieData(completion : @escaping (Double)->Void ) {
         var tmp : Double = 0
-        for d in data {
-            tmp += d
+        getActiveEnergyData { (dataa) in
+            for d in dataa {
+                tmp += d
+            }
+            completion(tmp)
         }
-        return tmp
     }
+    
     func getStepCountData(completionHandler : @escaping (([Double]) -> Void)) {
         var data = [Double]()
-        
         //sample type
         guard let sampleType = HKSampleType.quantityType(forIdentifier: .stepCount) else {return}
         //limit
         let limit = HKObjectQueryNoLimit
         //predicate
         let predicate = setPredicate()
-        
         let sampleQuery = HKSampleQuery(sampleType: sampleType, predicate: predicate, limit: limit, sortDescriptors: nil) { (sampleQuery, results, error) in
             
             guard let samples = results as? [HKQuantitySample] else {return}
             DispatchQueue.main.async {
-                print(samples.count)
                 for sample in samples {
                     let steps = sample.quantity.doubleValue(for: .count())
                     data.append(steps)
                 }
                 completionHandler(data)
             }
-            
         }
         healthStore.execute(sampleQuery)
-        
     }
     
-    func getActiveEnergyData() -> [Double] {
+    func getActiveEnergyData(completionHandler : @escaping (([Double]) -> Void)){
         var data = [Double]()
         
         //sample type
-        guard let sampleType = HKSampleType.quantityType(forIdentifier: .activeEnergyBurned) else {return data}
+        guard let sampleType = HKSampleType.quantityType(forIdentifier: .activeEnergyBurned) else {return}
         //limit
         let limit = HKObjectQueryNoLimit
         //predicate
         let predicate = setPredicate()
         
-        let sampleQuery = HKSampleQuery(sampleType: sampleType, predicate: predicate, limit: limit, sortDescriptors: nil) { (query, results, error) in
-            if results as? [HKQuantitySample] == nil {
-//                print ("nil value")
-            }
+        
+        let sampleQuery = HKSampleQuery(sampleType: sampleType, predicate: predicate, limit: limit, sortDescriptors: nil) { (sampleQuery, results, error) in
+            
             guard let samples = results as? [HKQuantitySample] else {return}
             DispatchQueue.main.async {
                 for sample in samples {
                     let caloriesValue = sample.quantity.doubleValue(for: .kilocalorie())
                     data.append(caloriesValue)
-//                    print (caloriesValue)
                 }
+                completionHandler(data)
             }
         }
         healthStore.execute(sampleQuery)
-        return data
     }
     
     func setPredicate() -> NSPredicate{

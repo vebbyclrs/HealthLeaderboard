@@ -13,13 +13,15 @@ class ViewController: UIViewController {
     
     let hkHandler = HealthKitHandler()
     var user : UserStepsModel?
+    var usersArray = UsersData()
+    var leaderboard : [UserStepsModel]? = nil
     
     
     @IBOutlet var userBanner: UIView!
     @IBOutlet var userImage: UIImageView!
     @IBOutlet var lbTable: UITableView!
     @IBOutlet var userRank: UILabel!
-    @IBOutlet var userCalories: UILabel!
+    @IBOutlet var userSteps: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,12 +38,28 @@ class ViewController: UIViewController {
             self.user = UserStepsModel(name: "Vebby Clarissa",
                                        userImage: UIImage(named: "ownerImage")!,
                                        steps: stepCount)
-            self.userImage.image = self.user!.userImage
-            self.userCalories.text = String(Int(self.user!.steps))
+            self.user?.isMe = true
+            self.usersArray.userData.append(self.user!)
+            self.leaderboard = self.usersArray.userData.sorted(by: { $0.steps > $1.steps })
+            self.findMeInLeaderboard()
         }
         userBanner.giveShadow(x: 0, y: 5, opacity: 0.5, blur: 5, shadowColor: nil)
         userImage.circleFrame(borderColor: UIColor.white.cgColor, borderWidth: 4)
     }
+    
+    func findMeInLeaderboard() {
+        guard let leaderboardd = self.leaderboard else {return}
+        
+        for (no,val) in leaderboardd.enumerated() {
+            print (no,val.name,val.steps)
+            if val.isMe {
+                self.userRank.text = String(no+1)
+                self.userSteps.text = String(Int(self.user!.steps))
+                self.userImage.image = self.user!.userImage
+            }
+        }
+    }
+    
 }
 
 //extension UIViewController : UITableViewDelegate, UITableViewDataSource{
