@@ -40,7 +40,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="87z-DU-o03">
-                                <rect key="frame" x="50" y="516" width="315" height="40"/>
+                                <rect key="frame" x="50" y="493" width="315" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.70588235290000001" blue="0.0078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Get In">
@@ -133,7 +133,7 @@
                                     <constraint firstItem="Okv-OE-joz" firstAttribute="trailing" secondItem="joN-sA-ZJU" secondAttribute="trailing" id="waL-jJ-zNF"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kC6-TP-zZI">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kC6-TP-zZI">
                                 <rect key="frame" x="140" y="160" width="134" height="134"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="134" id="9CS-9w-91i"/>
@@ -202,7 +202,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Steps Leaderboard" id="3Ny-G1-l9g"/>
+                    <navigationItem key="navigationItem" title="Calory Leaderboard" id="3Ny-G1-l9g"/>
                     <connections>
                         <outlet property="lbTable" destination="8tI-NQ-kJQ" id="2SZ-U5-1kS"/>
                         <outlet property="userBanner" destination="B02-jU-hxN" id="srO-Kk-VC8"/>

@@ -14,10 +14,10 @@ class UserStepsModel {
     let steps : Double
     let userImage : UIImage
     
-    init(name:String, image: UIImage, steps: Double?) {
+    init(name:String, userImage: UIImage, steps: Double?) {
         self.name = name
         self.steps = steps ?? 0
-        self.userImage = image
+        self.userImage = userImage
     }
     
     

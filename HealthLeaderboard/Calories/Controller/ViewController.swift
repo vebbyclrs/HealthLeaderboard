@@ -12,6 +12,8 @@ import HealthKit
 class ViewController: UIViewController {
     
     let hkHandler = HealthKitHandler()
+    var user : UserStepsModel?
+    
     
     @IBOutlet var userBanner: UIView!
     @IBOutlet var userImage: UIImageView!
@@ -24,16 +26,19 @@ class ViewController: UIViewController {
         if HKHealthStore.isHealthDataAvailable() {
             // Add code to use HealthKit here. Like process the data etc
             hkHandler.requestPermission()
-            hkHandler.getStepCountData()
-            hkHandler.getActiveEnergyData()
             setView()
         }
         // Do any additional setup after loading the view.
     }
-    func setView () {
-        setBanner()
-    }
-    func setBanner() {
+    
+    func setView() {
+        hkHandler.getTodayStepData { (stepCount) in
+            self.user = UserStepsModel(name: "Vebby Clarissa",
+                                       userImage: UIImage(named: "ownerImage")!,
+                                       steps: stepCount)
+            self.userImage.image = self.user!.userImage
+            self.userCalories.text = String(Int(self.user!.steps))
+        }
         userBanner.giveShadow(x: 0, y: 5, opacity: 0.5, blur: 5, shadowColor: nil)
         userImage.circleFrame(borderColor: UIColor.white.cgColor, borderWidth: 4)
     }

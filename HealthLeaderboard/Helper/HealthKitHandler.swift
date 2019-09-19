@@ -29,29 +29,49 @@ public class HealthKitHandler {
         }
     }
     
-    func getStepCountData() -> [Double] {
+    func getTodayStepData(completion : @escaping (Double)->Void ){
+        var tmp : Double = 0
+        getStepCountData { (dataa) in
+            for d in dataa {
+                tmp += d
+            }
+            completion(tmp)
+        }
+        
+    }
+    func getTodayCalorieData() -> Double {
+        let data = getActiveEnergyData()
+        var tmp : Double = 0
+        for d in data {
+            tmp += d
+        }
+        return tmp
+    }
+    func getStepCountData(completionHandler : @escaping (([Double]) -> Void)) {
         var data = [Double]()
         
         //sample type
-        guard let sampleType = HKSampleType.quantityType(forIdentifier: .stepCount) else {return data}
+        guard let sampleType = HKSampleType.quantityType(forIdentifier: .stepCount) else {return}
         //limit
         let limit = HKObjectQueryNoLimit
         //predicate
         let predicate = setPredicate()
+        
         let sampleQuery = HKSampleQuery(sampleType: sampleType, predicate: predicate, limit: limit, sortDescriptors: nil) { (sampleQuery, results, error) in
+            
             guard let samples = results as? [HKQuantitySample] else {return}
             DispatchQueue.main.async {
                 print(samples.count)
                 for sample in samples {
-                    let startTime = sample.startDate
                     let steps = sample.quantity.doubleValue(for: .count())
                     data.append(steps)
                 }
+                completionHandler(data)
             }
+            
         }
         healthStore.execute(sampleQuery)
         
-        return data
     }
     
     func getActiveEnergyData() -> [Double] {
