@@ -44,6 +44,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="NYD-ee-GZ3" firstAttribute="centerY" secondItem="WDW-ua-wTJ" secondAttribute="centerY" id="Xct-cy-30p"/>
                     <constraint firstAttribute="trailing" secondItem="NYD-ee-GZ3" secondAttribute="trailing" constant="12" id="cEl-NL-jfa"/>
@@ -52,9 +53,7 @@
             <viewLayoutGuide key="safeArea" id="hpP-oK-RUx"/>
             <connections>
                 <outlet property="baseView" destination="WDW-ua-wTJ" id="OSF-z9-h2O"/>
-                <outlet property="nameLabel" destination="UtB-gL-jr9" id="flV-kT-7Rq"/>
                 <outlet property="nameLb" destination="UtB-gL-jr9" id="a2g-YG-Bm6"/>
-                <outlet property="stepsLabel" destination="NYD-ee-GZ3" id="Uud-ec-jng"/>
                 <outlet property="stepsLb" destination="NYD-ee-GZ3" id="uJV-4e-UoR"/>
                 <outlet property="userImage" destination="kCQ-0w-5Mr" id="9Mb-fa-lgX"/>
             </connections>

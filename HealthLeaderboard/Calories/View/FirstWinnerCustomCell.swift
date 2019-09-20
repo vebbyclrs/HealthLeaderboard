@@ -22,7 +22,8 @@ class FirstWinnerCustomCell: UITableViewCell {
     }
     
     func setBaseView() {
-        baseView.giveShadow(x: 0, y: 2, opacity: 0.5, blur: 4, shadowColor: nil)
+        self.heightAnchor.constraint(equalToConstant: 64)
+//        baseView.giveShadow(x: 0, y: 2, opacity: 0.5, blur: 2, shadowColor: nil)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
