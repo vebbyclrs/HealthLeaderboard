@@ -8,22 +8,26 @@
 
 import UIKit
 import LocalAuthentication
+import HealthKit
 
 class LoginViewController: UIViewController {
-
+    let hkHandler = HealthKitHandler()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if HKHealthStore.isHealthDataAvailable() {
+            hkHandler.requestPermission()
+        }
         // Do any additional setup after loading the view.
     }
     
     @IBAction func login(_ sender: Any) {
         let context = LAContext()
-        
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
             context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "We need your face id to access the app") { (success, error) in
                 if success {
-                    self.performSegue(withIdentifier: "move", sender: self)
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "move", sender: self)
+                    }
                 } else {
                     print ("Biometric did not success")
                 }

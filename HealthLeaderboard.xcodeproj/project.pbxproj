@@ -35,7 +35,7 @@
 		CC42C4062334A86F00E91914 /* OtherRankCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherRankCustomCell.swift; sourceTree = "<group>"; };
 		CC42C4072334A86F00E91914 /* OtherRankCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherRankCustomCell.xib; sourceTree = "<group>"; };
 		CC42C40A2334B44900E91914 /* CircularTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
-		CCF262372333624D000D5AEE /* HealthLeaderboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthLeaderboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCF262372333624D000D5AEE /* Academy Walker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Academy Walker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF2623A2333624D000D5AEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCF2623C2333624D000D5AEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CCF2623F2333624D000D5AEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Steps.storyboard; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 		CCF262382333624D000D5AEE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CCF262372333624D000D5AEE /* HealthLeaderboard.app */,
+				CCF262372333624D000D5AEE /* Academy Walker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -185,7 +185,7 @@
 			);
 			name = HealthLeaderboard;
 			productName = HealthLeaderboard;
-			productReference = CCF262372333624D000D5AEE /* HealthLeaderboard.app */;
+			productReference = CCF262372333624D000D5AEE /* Academy Walker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -414,7 +414,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.VebbyC.HealthLeaderboard;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Academy Walker";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -433,7 +433,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.VebbyC.HealthLeaderboard;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Academy Walker";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

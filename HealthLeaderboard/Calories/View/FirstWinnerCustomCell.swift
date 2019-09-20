@@ -28,11 +28,11 @@ class FirstWinnerCustomCell: UITableViewCell {
     
     func setBaseView() {
 //        self.heightAnchor.constraint(equalToConstant: 64)
-        baseView.giveShadow(x: 0, y: 2, opacity: 0.5, blur: 2, shadowColor: nil)
+        baseView.giveShadow()
         baseView.backgroundColor = .white
         baseView.layer.cornerRadius = 5
         
-        baseView1st.giveShadow(x: 0, y: 2, opacity: 0.5, blur: 2, shadowColor: nil)
+        baseView1st.giveShadow()
         baseView1st.backgroundColor = .white
         baseView1st.layer.cornerRadius = 5
     }

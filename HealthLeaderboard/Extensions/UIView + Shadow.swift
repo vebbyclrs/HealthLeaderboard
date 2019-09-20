@@ -11,11 +11,11 @@ import UIKit
 
 extension UIView {
     
-    func giveShadow(x: CGFloat, y: CGFloat, opacity: Float, blur: CGFloat, shadowColor: CGColor?) {
-        let rect = CGRect(x: x, y: y, width: frame.width, height: frame.height)
+    func giveShadow() {
+        let rect = CGRect(x: 0, y: 5, width: frame.width, height: frame.height)
         layer.shadowPath = UIBezierPath(roundedRect: rect, cornerRadius: layer.cornerRadius).cgPath
-        layer.shadowOpacity = opacity
-        layer.shadowRadius = blur
-        layer.shadowColor = shadowColor ?? UIColor.black.cgColor
+        layer.shadowOpacity = 0.5
+        layer.shadowRadius = 2
+        layer.shadowColor = UIColor.black.cgColor
     }
 }

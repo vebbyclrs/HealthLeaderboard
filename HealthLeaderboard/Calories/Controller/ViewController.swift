@@ -31,11 +31,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         lbTable.delegate = self
         lbTable.dataSource = self
-        if HKHealthStore.isHealthDataAvailable() {
-            // Add code to use HealthKit here. Like process the data etc
-            hkHandler.requestPermission()
-            setView()
-        }
+        setView()
         // Do any additional setup after loading the view.
     }
     
@@ -51,8 +47,24 @@ class ViewController: UIViewController {
             self.leaderboard = self.usersArray.userData.sorted(by: { $0.steps > $1.steps })
             self.findMeInLeaderboard()
         }
-        userBanner.giveShadow(x: 0, y: 5, opacity: 0.5, blur: 5, shadowColor: nil)
+        userBanner.giveShadow()
         userImage.circleFrame(borderColor: UIColor.white.cgColor, borderWidth: 4)
+        
+        //set up pull to refresh
+//        private let refreshControl = UIRefreshControl()
+//        lbTable.refreshControl = refreshControl
+    }
+    
+    func refreshData() {
+        hkHandler.getTodayStepData { (stepCount) in
+            self.user = UserStepsModel(name: "Vebby Clarissa",
+                                       userImage: UIImage(named: "ownerImage")!,
+                                       steps: stepCount)
+            self.user?.isMe = true
+            self.usersArray.userData.append(self.user!)
+            self.leaderboard = self.usersArray.userData.sorted(by: { $0.steps > $1.steps })
+            self.findMeInLeaderboard()
+        }
     }
     
     func findMeInLeaderboard() {
