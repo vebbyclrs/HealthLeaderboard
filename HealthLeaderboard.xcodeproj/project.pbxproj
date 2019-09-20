@@ -11,6 +11,7 @@
 		CC23830D23340CC200A268E5 /* SecondWinnerCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC23830B23340CC200A268E5 /* SecondWinnerCustomCell.xib */; };
 		CC42C4082334A86F00E91914 /* OtherRankCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42C4062334A86F00E91914 /* OtherRankCustomCell.swift */; };
 		CC42C4092334A86F00E91914 /* OtherRankCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC42C4072334A86F00E91914 /* OtherRankCustomCell.xib */; };
+		CC42C40B2334B44900E91914 /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42C40A2334B44900E91914 /* CircularTransition.swift */; };
 		CCF2623B2333624D000D5AEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF2623A2333624D000D5AEE /* AppDelegate.swift */; };
 		CCF2623D2333624D000D5AEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF2623C2333624D000D5AEE /* ViewController.swift */; };
 		CCF262402333624D000D5AEE /* Steps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF2623E2333624D000D5AEE /* Steps.storyboard */; };
@@ -33,6 +34,7 @@
 		CC23830B23340CC200A268E5 /* SecondWinnerCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondWinnerCustomCell.xib; sourceTree = "<group>"; };
 		CC42C4062334A86F00E91914 /* OtherRankCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherRankCustomCell.swift; sourceTree = "<group>"; };
 		CC42C4072334A86F00E91914 /* OtherRankCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherRankCustomCell.xib; sourceTree = "<group>"; };
+		CC42C40A2334B44900E91914 /* CircularTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
 		CCF262372333624D000D5AEE /* HealthLeaderboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthLeaderboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF2623A2333624D000D5AEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCF2623C2333624D000D5AEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			children = (
 				CCF2623C2333624D000D5AEE /* ViewController.swift */,
 				CCF262702333CA70000D5AEE /* LoginViewController.swift */,
+				CC42C40A2334B44900E91914 /* CircularTransition.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				CCF2624D2333641B000D5AEE /* HealthKitHandler.swift in Sources */,
 				CCF2623D2333624D000D5AEE /* ViewController.swift in Sources */,
 				CCF2626F2333BA76000D5AEE /* UsersData.swift in Sources */,
+				CC42C40B2334B44900E91914 /* CircularTransition.swift in Sources */,
 				CCF2626123338AC8000D5AEE /* UserStepsModel.swift in Sources */,
 				CCF2626C2333A9EC000D5AEE /* FirstWinnerCustomCell.swift in Sources */,
 				CCF26267233397FF000D5AEE /* UIImage + Rounded Frame.swift in Sources */,
