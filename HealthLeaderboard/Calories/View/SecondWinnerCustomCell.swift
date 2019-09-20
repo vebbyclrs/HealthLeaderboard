@@ -30,6 +30,8 @@ class SecondWinnerCustomCell: UITableViewCell {
     
     func setBaseView() {
 //        baseView.giveShadow(x: 0, y: 2, opacity: 0.5, blur: 4, shadowColor: nil)
+        baseView.backgroundColor = .white
+        baseView.layer.cornerRadius = 5
     }
     
 }

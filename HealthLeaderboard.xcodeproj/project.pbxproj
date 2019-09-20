@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		CC23830C23340CC200A268E5 /* SecondWinnerCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC23830A23340CC200A268E5 /* SecondWinnerCustomCell.swift */; };
 		CC23830D23340CC200A268E5 /* SecondWinnerCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC23830B23340CC200A268E5 /* SecondWinnerCustomCell.xib */; };
+		CC42C4082334A86F00E91914 /* OtherRankCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42C4062334A86F00E91914 /* OtherRankCustomCell.swift */; };
+		CC42C4092334A86F00E91914 /* OtherRankCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC42C4072334A86F00E91914 /* OtherRankCustomCell.xib */; };
 		CCF2623B2333624D000D5AEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF2623A2333624D000D5AEE /* AppDelegate.swift */; };
 		CCF2623D2333624D000D5AEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF2623C2333624D000D5AEE /* ViewController.swift */; };
 		CCF262402333624D000D5AEE /* Steps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF2623E2333624D000D5AEE /* Steps.storyboard */; };
@@ -29,6 +31,8 @@
 /* Begin PBXFileReference section */
 		CC23830A23340CC200A268E5 /* SecondWinnerCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondWinnerCustomCell.swift; sourceTree = "<group>"; };
 		CC23830B23340CC200A268E5 /* SecondWinnerCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondWinnerCustomCell.xib; sourceTree = "<group>"; };
+		CC42C4062334A86F00E91914 /* OtherRankCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherRankCustomCell.swift; sourceTree = "<group>"; };
+		CC42C4072334A86F00E91914 /* OtherRankCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherRankCustomCell.xib; sourceTree = "<group>"; };
 		CCF262372333624D000D5AEE /* HealthLeaderboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthLeaderboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF2623A2333624D000D5AEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCF2623C2333624D000D5AEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 				CCF2626B2333A9EC000D5AEE /* FirstWinnerCustomCell.xib */,
 				CC23830A23340CC200A268E5 /* SecondWinnerCustomCell.swift */,
 				CC23830B23340CC200A268E5 /* SecondWinnerCustomCell.xib */,
+				CC42C4062334A86F00E91914 /* OtherRankCustomCell.swift */,
+				CC42C4072334A86F00E91914 /* OtherRankCustomCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -223,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCF2626D2333A9EC000D5AEE /* FirstWinnerCustomCell.xib in Resources */,
+				CC42C4092334A86F00E91914 /* OtherRankCustomCell.xib in Resources */,
 				CC23830D23340CC200A268E5 /* SecondWinnerCustomCell.xib in Resources */,
 				CCF262452333624E000D5AEE /* LaunchScreen.storyboard in Resources */,
 				CCF262422333624E000D5AEE /* Assets.xcassets in Resources */,
@@ -246,6 +253,7 @@
 				CCF262752333CED9000D5AEE /* UIView + Shadow.swift in Sources */,
 				CC23830C23340CC200A268E5 /* SecondWinnerCustomCell.swift in Sources */,
 				CCF2623B2333624D000D5AEE /* AppDelegate.swift in Sources */,
+				CC42C4082334A86F00E91914 /* OtherRankCustomCell.swift in Sources */,
 				CCF262712333CA70000D5AEE /* LoginViewController.swift in Sources */,
 				CCF2625323336910000D5AEE /* Date + Yesterday etc.swift in Sources */,
 			);

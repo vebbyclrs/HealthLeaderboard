@@ -73,22 +73,17 @@ class ViewController: UIViewController {
 extension ViewController : UITableViewDelegate, UITableViewDataSource{
     
     enum Section{
-        static let firstWinner = 0
-        static let secondWinner = 1
-        static let other = 2
+        static let winner = 0
+        static let other = 1
     }
     
     func registerNib() {
-//        let cellClass = UITableViewCell(style: .value2, reuseIdentifier: nil)
-//        lbTable.register(cellClass, forCellReuseIdentifier: <#T##String#>)
-//        lbTable.register(UITableViewCell(style: .value2, reuseIdentifier: nil), forCellReuseIdentifier: "defaultCell")
-        lbTable.register(UITableViewCell.self, forCellReuseIdentifier: "defaultCell")
-        lbTable.register(UINib(nibName: "SecondWinnerCustomCell", bundle: nil), forCellReuseIdentifier: "secondWinnerCustomCell")
         lbTable.register(UINib(nibName: "FirstWinnerCustomCell", bundle: nil), forCellReuseIdentifier: "firstWinnerCustomCell")
+        lbTable.register(UINib(nibName: "OtherRankCustomCell", bundle: nil), forCellReuseIdentifier: "defaultCell")
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 2
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -101,35 +96,35 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section != Section.other {
-            return 80
+            return 180
+        
         } else {
             return 44
         }
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == Section.firstWinner {
+        if indexPath.section == Section.winner {
             let cell = tableView.dequeueReusableCell(withIdentifier: "firstWinnerCustomCell") as! FirstWinnerCustomCell
             if let lb = leaderboard {
-                cell.nameLabel.text = lb[0].name
-                cell.stepsLabel.text = lb[0].steps.description
-                cell.userImage.image = lb[0].userImage
-            }
-            return cell
-        }else if indexPath.section == Section.secondWinner {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "secondWinnerCustomCell") as! SecondWinnerCustomCell
-            if let lb = leaderboard {
-                cell.nameLb.text = lb[1].name
-                cell.stepsLb.text = lb[1].steps.description
-                cell.userImage.image = lb[1].userImage
+                cell.firstName.text = lb[0].name
+                cell.firstImage.image = lb[0].userImage
+                cell.firstSteps.text = "\(Int(lb[0].steps).description) steps"
+                
+                cell.secondName.text = lb[1].name
+                cell.secondImage.image = lb[1].userImage
+                cell.secondSteps.text = "\(Int(lb[1].steps).description) steps"
             }
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell", for: indexPath) as! OtherRankCustomCell
             if let lb = leaderboard {
                 let rank = indexPath.row+2
-                cell.textLabel?.text = "\(rank+1). \(lb[rank].name)"
-                cell.detailTextLabel?.text = lb[rank].steps.description
+                cell.rankAndNameLabel.text = "\(rank+1). \(lb[rank].name)"
+                cell.stepsLabel.text = "\(Int(lb[rank].steps).description) steps"
+                    
+//                cell.textLabel?.text = "\(rank+1). \(lb[rank].name)"
+//                cell.detailTextLabel?.text = lb[rank].steps.description
             }
             return cell
         }

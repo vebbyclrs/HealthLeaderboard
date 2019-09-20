@@ -10,9 +10,14 @@ import UIKit
 
 class FirstWinnerCustomCell: UITableViewCell {
 
-    @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var stepsLabel: UILabel!
-    @IBOutlet var userImage: UIImageView!
+    @IBOutlet var firstImage: UIImageView!
+    @IBOutlet var firstName: UILabel!
+    @IBOutlet var firstSteps: UILabel!
+    @IBOutlet var secondImage: UIImageView!
+    @IBOutlet var secondName: UILabel!
+    @IBOutlet var secondSteps: UILabel!
+    
+    @IBOutlet var baseView1st: UIView!
     @IBOutlet var baseView: UIView!
     
     override func awakeFromNib() {
@@ -22,8 +27,14 @@ class FirstWinnerCustomCell: UITableViewCell {
     }
     
     func setBaseView() {
-        self.heightAnchor.constraint(equalToConstant: 64)
-//        baseView.giveShadow(x: 0, y: 2, opacity: 0.5, blur: 2, shadowColor: nil)
+//        self.heightAnchor.constraint(equalToConstant: 64)
+        baseView.giveShadow(x: 0, y: 2, opacity: 0.5, blur: 2, shadowColor: nil)
+        baseView.backgroundColor = .white
+        baseView.layer.cornerRadius = 5
+        
+        baseView1st.giveShadow(x: 0, y: 2, opacity: 0.5, blur: 2, shadowColor: nil)
+        baseView1st.backgroundColor = .white
+        baseView1st.layer.cornerRadius = 5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
